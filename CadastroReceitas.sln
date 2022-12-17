@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CadastroReceitas.UI", "src\CadastroReceitas.UI\CadastroReceitas.UI.csproj", "{A97CD682-2C98-4487-A6B5-793F9DD83B39}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CadastroReceitas.Persistence", "src\CadastroReceitas.Persistence\CadastroReceitas.Persistence.csproj", "{9C5B9506-B66B-430B-B4D1-DC7A535346BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CadastroReceitas.IoC", "src\CadastroReceitas.IoC\CadastroReceitas.IoC.csproj", "{7B415B98-EBD6-4D99-90AA-7D619A00C6F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CadastroReceitas.Domain", "src\CadastroReceitas.Domain\CadastroReceitas.Domain.csproj", "{4CFC8263-E173-463F-8350-A572606D31A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CadastroReceitas.Application", "src\CadastroReceitas.Application\CadastroReceitas.Application.csproj", "{20346206-F201-4CD9-AE96-9FE9F728A89B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CadastroReceitas.Api", "src\CadastroReceitas.Api\CadastroReceitas.Api.csproj", "{C314F0EF-1F54-4744-9EE8-3CBA995BB7B6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A97CD682-2C98-4487-A6B5-793F9DD83B39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A97CD682-2C98-4487-A6B5-793F9DD83B39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A97CD682-2C98-4487-A6B5-793F9DD83B39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A97CD682-2C98-4487-A6B5-793F9DD83B39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C5B9506-B66B-430B-B4D1-DC7A535346BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C5B9506-B66B-430B-B4D1-DC7A535346BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C5B9506-B66B-430B-B4D1-DC7A535346BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C5B9506-B66B-430B-B4D1-DC7A535346BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B415B98-EBD6-4D99-90AA-7D619A00C6F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B415B98-EBD6-4D99-90AA-7D619A00C6F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B415B98-EBD6-4D99-90AA-7D619A00C6F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B415B98-EBD6-4D99-90AA-7D619A00C6F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CFC8263-E173-463F-8350-A572606D31A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CFC8263-E173-463F-8350-A572606D31A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CFC8263-E173-463F-8350-A572606D31A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CFC8263-E173-463F-8350-A572606D31A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20346206-F201-4CD9-AE96-9FE9F728A89B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20346206-F201-4CD9-AE96-9FE9F728A89B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20346206-F201-4CD9-AE96-9FE9F728A89B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20346206-F201-4CD9-AE96-9FE9F728A89B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C314F0EF-1F54-4744-9EE8-3CBA995BB7B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C314F0EF-1F54-4744-9EE8-3CBA995BB7B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C314F0EF-1F54-4744-9EE8-3CBA995BB7B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C314F0EF-1F54-4744-9EE8-3CBA995BB7B6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CC55624F-DD14-4203-B447-C6399EA3A08E}
+	EndGlobalSection
+EndGlobal
