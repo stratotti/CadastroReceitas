@@ -1,5 +1,4 @@
-﻿@using CadastroReceitas.Domain.Models;
-@model List<Receita>
+﻿@model List<Receita>
 
 @{
     ViewData["Title"] = "Suas Receitas";
@@ -43,8 +42,8 @@
                             <td class="text-center">
                                 <form class="d-inline-block">
                                     <button class="btn btn-success">&nbsp;&nbsp;VER&nbsp;&nbsp;</button>
-                                    <button class="btn btn-info">EDITAR</button>
-                                    <button class="btn btn-danger">REMOVER</button>
+                                    <a asp-action="Edit" asp-controller="Receita" asp-route-id="@receita.Id" class="btn btn-info">Editar</a>
+                                    <a asp-action="Delete" asp-controller="Receita" asp-route-id="@receita.Id" class="btn btn-danger">Remover</a>
                                 </form>
                             </td>
                         </tr>

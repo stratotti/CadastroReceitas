@@ -30,7 +30,6 @@ public class ReceitaController : Controller
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Create(Receita model)
     {
-        ModelState.Remove("Id");
         model.DataInclusao = DateTime.Now;
         if (ModelState.IsValid)
         {
@@ -39,5 +38,31 @@ public class ReceitaController : Controller
         }
 
         return View(model);
+    }
+
+    [HttpGet]
+    public async Task<IActionResult> Edit(int id)
+    {
+        var receita = await _receitaService.Select(id);
+        return View(receita);
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> Edit(Receita receita)
+    {
+        if (ModelState.IsValid) 
+        {
+            await _receitaService.Update(receita.Id, receita);
+            return RedirectToAction("Index");
+        }
+
+        return View(receita);
+    }
+
+    public async Task<IActionResult> Delete(int id)
+    {
+        var receita = await _receitaService.Select(id);
+        await _receitaService.Delete(receita);
+        return RedirectToAction("Index");
     }
 }
