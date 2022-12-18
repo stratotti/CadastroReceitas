@@ -1,5 +1,56 @@
-﻿<h1> Suas Receitas </h1>
+﻿@using CadastroReceitas.Domain.Models;
+@model List<Receita>
 
-<div>
-    <a class="btn btn-primary" asp-controller="Receita" asp-action="Create">Novo</a>
+@{
+    ViewData["Title"] = "Suas Receitas";
+}
+<h1> @ViewData["Title"] </h1>
+
+<div class="dvCentro">
+    <div class="row">
+        <div class="row">
+            <div>
+                <div class="card-img" style="text-align:center">
+                    <img src="~/img/NovasReceitas.jpg" alt="Logo Master Food" />
+                </div>
+                <div class="card-link">
+                    <br />
+                    &nbsp; &nbsp; &nbsp; &nbsp;
+                    <a style="color:coral" asp-controller="Receita" asp-action="Create">CRIAR NOVA RECEITA</a>
+                    <p></p>
+                    <p></p>
+                </div>
+            </div>
+            &nbsp;&nbsp;
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Nome Receita</th>
+                        <th>Data</th>
+                        <th class="text-center">Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var receita in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.Raw(receita.Titulo)
+                            </td>
+                            <td>
+                                @Html.Raw(receita.DataInclusao.ToString("dd/MM/yyyy"))
+                            </td>
+                            <td class="text-center">
+                                <form class="d-inline-block">
+                                    <button class="btn btn-success">&nbsp;&nbsp;VER&nbsp;&nbsp;</button>
+                                    <button class="btn btn-info">EDITAR</button>
+                                    <button class="btn btn-danger">REMOVER</button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>

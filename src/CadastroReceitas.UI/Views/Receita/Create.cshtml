@@ -1,12 +1,11 @@
 ﻿@model CadastroReceitas.Domain.Models.Receita
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Cadastrar Receita";
 }
 
-<h1>Create</h1>
+<h1>@ViewData["Title"]</h1>
 
-<h4>Receita</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -33,17 +32,60 @@
                 <input asp-for="Imagem" class="form-control" />
                 <span asp-validation-for="Imagem" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+            <p></p>
+            <div class="form-group text-left">
+                <input type="submit" value="Cadastrar" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-danger">Cancelar</a>
             </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+
+@*<main class="container mt-3">
+    <div class="row justify-content-center">
+        <div class="col-sm-12">
+            <h1>@ViewData["Title"]</h1>
+            <hr />
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="Id" class="form-control" />
+                <div class="form-group">
+                    <label asp-for="Titulo" class="col-form-label"></label>
+                    <input asp-for="Titulo" class="form-control col-6" />
+                    <span asp-validation-for="Titulo" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Ingredientes" class="col-form-label"></label>
+                    <input asp-for="Ingredientes" class="form-control col-6" />
+                    <span asp-validation-for="Ingredientes" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="ModoPreparo" class="col-form-label"></label>
+                    <input asp-for="ModoPreparo" class="form-control col-6" />
+                    <span asp-validation-for="ModoPreparo" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Imagem" class="col-form-label"></label>
+                    <input asp-for="Imagem" class="form-control col-6" />
+                    <span asp-validation-for="Imagem" class="text-danger"></span>
+                </div>
+               
+                <p> </p>
+                <div class="form-group text-left">
+                    <a asp-action="Index" class="btn btn-danger">Cancelar</a>
+                    <input type="submit" value="Salvar" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+</main>*@
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }
