@@ -2,6 +2,7 @@
 using CadastroReceitas.Domain.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Text.Json;
 
 namespace CadastroReceitas.UI.Controllers;
 [Authorize]
@@ -64,5 +65,13 @@ public class ReceitaController : Controller
         var receita = await _receitaService.Select(id);
         await _receitaService.Delete(receita);
         return RedirectToAction("Index");
+    }
+
+    [HttpGet]
+    public async Task<JsonResult> Select(int id)
+    {
+        var receita = await _receitaService.Select(id);
+        
+        return Json(receita);
     }
 }
